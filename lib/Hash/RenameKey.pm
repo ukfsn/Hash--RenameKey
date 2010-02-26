@@ -4,18 +4,16 @@ use strict;
 use warnings;
 use base 'Class::Accessor';
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 sub rename_key {
     my ($self, $hash, $old, $new) = @_;
-    print "Replacing $old with $new\n";
     return unless $hash && $old && $new;
 
     my $recurse = undef;
     $recurse = sub {
         my $input = shift;
         while ( my ($oldkey, $contents) = each %$input ) {
-            print "$oldkey : $contents\n";
             my $newkey = $oldkey;
             $newkey =~ s/$old/$new/g;
             $recurse->($contents) if ref $contents eq 'HASH';
