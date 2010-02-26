@@ -35,7 +35,8 @@ sub rename_key {
 1;
 =head1 NAME
 
-Hash::RenameKey - Perl extension for recursively renaming keys
+Hash::RenameKey - Perl extension for recursively renaming keys according
+to a regex pattern match
 
 =head1 SYNOPSIS
 
@@ -50,8 +51,9 @@ Hash::RenameKey - Perl extension for recursively renaming keys
 =head1 DESCRIPTION
 
 This module provides a single function, rename_key, to recursively rename
-keys in a hash by replacing any instances of $old with $new in all keys
-in the hash, including contents of hashrefs and hashrefs inside arrayrefs.
+keys in a hash by applying a regex as follows:
+
+    s/$old/$new/g;
 
 =head2 EXPORT
 

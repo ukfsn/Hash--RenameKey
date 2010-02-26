@@ -1,8 +1,8 @@
 Hash-RenameKey version 0.01
 ===========================
 
-A perl module to recusively process a hash and rename
-all keys matching a specification.
+A perl module to recusively process a hash and rename all keys matching a 
+regex pattern.
 
 INSTALLATION
 
