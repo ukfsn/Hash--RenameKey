@@ -1,0 +1,6 @@
+Revision history for Perl extension Hash::RenameKey.
+
+0.01  Wed Feb 24 21:01:24 2010
+	- original version; created by h2xs 1.23 with options
+		-X -n Hash::RenameKey
+
