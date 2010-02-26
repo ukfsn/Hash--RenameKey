@@ -41,9 +41,11 @@ Hash::RenameKey - Perl extension for recursively renaming keys
 
   use Hash::RenameKey;
 
+  my $hr = Hash::RenameKey->new;
+
   my $old = '-';
   my $new = '_';
-  &rename_key(\%hash, $old, $new);
+  $hr->rename_key(\%hash, $old, $new);
 
 =head1 DESCRIPTION
 
@@ -53,8 +55,7 @@ in the hash, including contents of hashrefs and hashrefs inside arrayrefs.
 
 =head2 EXPORT
 
-rename_key
-
+Nothing is exported. This module uses an OO interface.
 
 =head1 AUTHOR
 
@@ -65,7 +66,7 @@ Jason Clifford, E<lt>jason@ukfsn.orgE<gt>
 Copyright (C) 2010 by Jason Clifford
 
 This library is free software; you can redistribute it and/or modify
-it under the terms of version 2 or later of the GNU GPL as published 
-by the Free Software Foundation.
+it under the same terms as Perl itself, either Perl version 5.08 or,
+at your option, any later version of Perl 5 you may have available.
 
 =cut
